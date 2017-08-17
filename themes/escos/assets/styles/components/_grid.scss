@@ -1,0 +1,54 @@
+$custom-narrow-grid: (
+  columns: 12,
+  gutter: 20px,
+  media: 700px,
+);
+$custom-wide-grid: (
+  columns: 12,
+  gutter: 50px,
+  media: 1080px,
+);
+
+.twelve-column-grid{
+   @include grid-container;
+  .one-third{
+    display: block;
+    max-width: 340px;
+    margin-left: auto;
+    margin-right: auto;
+    @include grid-media($custom-narrow-grid){
+      @include grid-column(4);
+
+    }
+    @include grid-media($custom-wide-grid){
+      @include grid-column(4);
+
+    }
+  }
+  .one-half{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    @include grid-media($custom-narrow-grid){
+      @include grid-column(6);
+
+    }
+    @include grid-media($custom-wide-grid){
+      @include grid-column(6);
+
+    }
+  }
+  .one-quarter{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    @include grid-media($custom-narrow-grid){
+      @include grid-column(3);
+
+    }
+    @include grid-media($custom-wide-grid){
+      @include grid-column(3);
+
+    }
+  }
+}

@@ -1,0 +1,13 @@
+.shadow-button{
+  text-transform: uppercase;
+  color: white;
+  background-color: $brand-green;
+  padding: 1em 2em;
+  @include box-shadow();
+  display: inline-block;
+  border-radius: 4px;
+  transition: all 0.275s ease;
+  &:hover{
+      background-color: darken($brand-green, 10%);
+  }
+}

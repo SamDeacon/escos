@@ -1,0 +1,157 @@
+.three-column-boxes{
+  background-color: $brand-grey-bg;
+  padding: 80px 0;
+  .box{
+    text-align: center;
+    position: relative;
+    margin-bottom: 3.333em;
+    img{
+      display: block;
+      border: 4px solid $brand-green-dark;
+    }
+    .board-sign{
+      position: absolute;
+      height: 70px;
+      width: 220px;
+      max-width: 100%;
+      top: -35px;
+      left: 0;
+      right: 0;
+      margin: auto;
+      background-image: url('../img/assets/wood-board-shadow.png');
+      background-size: contain;
+      background-position: 50%;
+      background-repeat: no-repeat;
+      transform: rotate(-7deg);
+      h2{
+        margin: 0;
+        font-size: 1.1em;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        color: $brand-grey-font;
+        padding: 1em;
+      }
+    }
+    &:nth-of-type(2){
+      .board-sign{
+        transform: rotate(-4deg);
+      }
+    }
+    &:nth-of-type(3){
+      .board-sign{
+        transform: rotate(6deg);
+      }
+      margin-bottom: 0;
+    }
+    @include grid-media($custom-narrow-grid){
+      margin-bottom: 0;
+      &:nth-of-type(2){
+        .board-sign{
+          bottom: -35px;
+          top: auto;
+        }
+      }
+    }
+  }
+}
+
+.homepage-newsfeed{
+  padding-bottom: 80px;
+  .article{
+    position: relative;
+    margin-bottom: 2em;
+    .image-half{
+      width: 50%;
+      display: inline-block;
+      float: left;
+      padding-right: 1em;
+      img{
+        width: 100%;
+        @include box-shadow();
+      }
+    }
+    .text-half{
+      width: 50%;
+      float: left;
+      h2{
+        margin-top: 0;
+        font-size: 1.2em;
+        @include paragraph-font-family;
+        text-transform: uppercase;
+        color: $brand-grey-font;
+        font-weight: 400;
+      }
+      p{
+        color: lighten($brand-grey-font, 10%);
+        font-size: 0.95em;
+      }
+    }
+  }
+}
+
+
+.anchor-green{
+  color: $brand-green;
+  font-weight: normal;
+  position: relative;
+  &:after{
+    position: absolute;
+    content: '';
+    display: block;
+    height: 1px;
+    background-color: $brand-green;
+    width: 100%;
+    bottom: -4px;
+    left: 0;
+  }
+}
+@media screen and (max-width: 991px) and (min-width: 700px) {
+  .homepage-newsfeed{
+    .article{
+      text-align: center;
+      .image-half{
+                  padding-right: 0;
+                  margin-bottom: 1.5em;
+      }
+      .image-half, .text-half{
+          width: 100%;
+          max-width: 320px;
+          float: none;
+          margin-left: auto;
+          margin-right: auto;
+        img{
+        }
+      }
+      }
+}
+}
+@media screen and (max-width: 700px) {
+  .homepage-newsfeed{
+    .article{
+      display:block;
+      @include clearfix;
+    }
+  }
+}
+
+@media screen and (max-width: 410px) {
+  .homepage-newsfeed{
+    .article{
+      text-align: center;
+      .image-half{
+                  padding-right: 0;
+                  margin-bottom: 1.5em;
+      }
+      .image-half, .text-half{
+          width: 100%;
+          max-width: 320px;
+          float: none;
+          margin-left: auto;
+          margin-right: auto;
+        img{
+        }
+      }
+      }
+}
+}

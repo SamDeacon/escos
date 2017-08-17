@@ -1,0 +1,13 @@
+{
+  "name": "sage",
+  "homepage": "https://roots.io/sage/",
+  "authors": [
+    "Ben Word <ben@benword.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "bourbon": "^4.3.4",
+    "uikit": "^2.27.4"
+  }
+}

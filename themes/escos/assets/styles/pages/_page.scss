@@ -1,0 +1,65 @@
+.pagewrap{
+  padding: 80px 0;
+  &.no-top{
+    padding-top: 0;
+  }
+}
+
+.page-with-sidebar{
+  >.container{
+    @include clearfix;
+  }
+  .left-content{
+    width: 73%;
+    float:left;
+  }
+  .right-sidebar{
+    width: 24%;
+    float: right;
+    border: 2px solid rgba($brand-green-dark, 0.66);
+    padding: 1.5em 1em;
+    position: relative;
+    text-align: center;
+    &:after{
+      position: absolute;
+      left: 2px;
+      top: 2px;
+      right: 2px;
+      bottom: 2px;
+    border: 1px dashed rgba($brand-green-dark, 0.66);;
+      content: '';
+      display: block;
+    }
+    h3{
+      margin-top: 0;
+
+    }
+
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .page-with-sidebar{
+    .left-content{
+      width: 69.5%;
+      float:left;
+    }
+    .right-sidebar{
+      width: 28%;
+      p{
+        font-size: 90%;
+      }
+}
+}
+}
+@media screen and (max-width: 780px) {
+  .page-with-sidebar{
+    .left-content{
+      width: 100%;
+      float:none;
+    }
+    .right-sidebar{
+      display: none;
+}
+}
+}

@@ -1,0 +1,3 @@
+
+(function($){$(document).ready(function(){if($("#slick-fader").length!==0){$('#slick-fader').slick({dots:false,arrows:false,infinite:true,speed:500,fade:true,autoplay:true,autoplaySpeed:3000,cssEase:'linear'});}
+$('#navtoggle').click(function(){if($('.mobile-bar').hasClass("extend-bar")){$($('.mobile-bar li').get().reverse()).each(function(i){var $li=$(this);setTimeout(function(){$li.removeClass('imVisible');},i*120);});setTimeout(function(){$('.mobile-bar').removeClass("extend-bar");},500);}else{$('.mobile-bar').addClass("extend-bar");$('.mobile-bar li').each(function(i){var $li=$(this);setTimeout(function(){$li.addClass('imVisible');},i*120);});}});});})(jQuery);

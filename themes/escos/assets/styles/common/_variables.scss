@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css?family=Lora:400,400i,700|Montserrat:200,200i,300,300i,400,400i,500,500i,600');
+
+$brand-green: #89a831;
+$brand-green-dark: #537f76;
+$brand-green-dark-footer: #3f4e4b;
+$brand-grey-font: #494848;
+$brand-grey-bg: #acac94;
+
+
+@mixin paragraph-font-family() {
+font-family: 'Montserrat', sans-serif;
+}
+
+@mixin heading-font-family() {
+font-family: 'Lora', serif;
+}
+
+@mixin box-shadow() {
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
