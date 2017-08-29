@@ -500,16 +500,17 @@ p {
 ul li, ol li {
   font-size: 1.1em; }
 
-.shadow-button, .nav-previous > a, .nav-next > a {
+.shadow-button, .nav-previous > a, .nav-next > a, input.wpcf7-submit {
   text-transform: uppercase;
   color: white;
   background-color: #89a831;
   padding: 1em 2em;
+  cursor: pointer;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   display: inline-block;
   border-radius: 4px;
   transition: all 0.275s ease; }
-  .shadow-button:hover, .nav-previous > a:hover, .nav-next > a:hover {
+  .shadow-button:hover, .nav-previous > a:hover, .nav-next > a:hover, input.wpcf7-submit:hover {
     background-color: #698125; }
 
 .twelve-column-grid::after {
@@ -1240,5 +1241,58 @@ body#tinymce {
 
 .contact-page {
   text-align: center; }
+  .contact-page .payment-logos br {
+    display: none; }
   .contact-page .payment-logos img {
-    display: inline-block; }
+    display: inline-block;
+    margin: 5px; }
+  .contact-page.intro-para h2 {
+    margin: 0.5em 0; }
+
+.contact-form-section {
+  background-color: #ccc; }
+  .contact-form-section .container.intro-para {
+    max-width: 1000px; }
+  .contact-form-section p {
+    margin-bottom: 0.5em; }
+  .contact-form-section label {
+    width: 50%;
+    margin-bottom: 1em;
+    text-align: left;
+    float: left;
+    font-size: 0.85em;
+    line-height: 1.85em; }
+    .contact-form-section label .wpcf7-text {
+      width: 100%;
+      padding: 0.4em; }
+    .contact-form-section label textarea {
+      width: 100%;
+      padding: 0.4em; }
+  .contact-form-section p:nth-of-type(5)::after, .contact-form-section p:nth-of-type(2)::after, .contact-form-section p:nth-of-type(4)::after {
+    clear: both;
+    content: "";
+    display: table; }
+  @media screen and (min-width: 768px) {
+    .contact-form-section p:nth-of-type(2) label, .contact-form-section p:nth-of-type(4) label {
+      padding-left: 1.5%; }
+    .contact-form-section p:nth-of-type(1) label, .contact-form-section p:nth-of-type(3) label {
+      padding-right: 1.5%; } }
+  .contact-form-section p:nth-of-type(5) label {
+    width: 100%;
+    float: none;
+    display: block; }
+
+input.wpcf7-submit {
+  border: 0; }
+
+@media screen and (max-width: 768px) {
+  .contact-form-section {
+    background-color: #ccc; }
+    .contact-form-section .container.intro-para {
+      max-width: 500px; }
+    .contact-form-section p {
+      margin-bottom: 0.5em; }
+    .contact-form-section label {
+      width: 100%;
+      float: none;
+      display: block; } }

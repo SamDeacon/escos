@@ -3,6 +3,7 @@
   color: white;
   background-color: $brand-green;
   padding: 1em 2em;
+  cursor: pointer;
   @include box-shadow();
   display: inline-block;
   border-radius: 4px;

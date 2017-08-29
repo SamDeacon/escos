@@ -1,8 +1,87 @@
 .contact-page{
   text-align: center;
   .payment-logos{
+    br{
+      display: none;
+    }
     img{
       display: inline-block;
+      margin: 5px;
+    }
+  }
+  &.intro-para h2{
+    margin: 0.5em 0;
+  }
+}
+
+
+.contact-form-section{
+  background-color: #ccc;
+  .container.intro-para{
+    max-width: 1000px;
+  }
+  p{
+    margin-bottom: 0.5em;
+  }
+  label{
+    width: 50%;
+    margin-bottom: 1em;
+    text-align: left;
+    float: left;
+    font-size: 0.85em;
+    line-height: 1.85em;
+    .wpcf7-text{
+      width: 100%;
+      padding: 0.4em;
+    }
+    textarea{
+      width: 100%;
+      padding: 0.4em;
+    }
+  }
+  p:nth-of-type(5), p:nth-of-type(2), p:nth-of-type(4) {
+    @include clearfix;
+  }
+  @media screen and (min-width: 768px){
+    p:nth-of-type(2), p:nth-of-type(4){
+      label{
+            padding-left: 1.5%;
+      }
+    }
+    p:nth-of-type(1), p:nth-of-type(3){
+      label{
+            padding-right: 1.5%;
+      }
+    }
+  }
+
+  p:nth-of-type(5){
+    label{
+      width: 100%;
+      float: none;
+      display: block;
+    }
+  }
+}
+
+input.wpcf7-submit{
+  @extend .shadow-button;
+  border: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .contact-form-section{
+    background-color: #ccc;
+    .container.intro-para{
+      max-width: 500px;
+    }
+    p{
+      margin-bottom: 0.5em;
+    }
+    label{
+      width: 100%;
+      float: none;
+      display: block;
     }
   }
 }

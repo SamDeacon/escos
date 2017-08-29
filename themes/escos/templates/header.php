@@ -57,7 +57,7 @@
 
     </div>
     <?php
-  } else { ?>
+  } elseif (!is_page_template(array('template-contact.php'))) { ?>
     <?php
     $img_id = escos_get_option('default_banner_id');
     $img_url = wp_get_attachment_image_src($img_id, 'home-banner-image');
